@@ -1,0 +1,26 @@
+module tb();
+  reg [3:0]a;
+  reg [3:0]out1;
+  reg [3:0]out2;
+  reg [3:0]out3;
+  reg [3:0]out4;
+  
+  initial
+    begin
+      a=4'b101x;
+      //unary and
+      out1=&a;
+      //unary or
+      out2=|a;
+      //unary exor
+      out3=^a;
+      //unary exnor
+      out4=~(^a);
+    end
+  
+  initial
+    begin
+      $monitor("a=%bout1=%b,out2=%b,out3=%b,out4=%b",a,out1,out2,out3,out4);
+    end
+endmodule
+
